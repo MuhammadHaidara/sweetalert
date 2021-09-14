@@ -39,48 +39,6 @@
                     confirmButtonText: 'OK',
                 });
                 await swals.fire('Coba klik icon hati dibawah');
-                if(nama){
-                    var { isConfirmed: sayang } = await swals.fire({
-                        title: `${nama} sayang ga sama ${author}`,
-                        confirmButtonText: 'Sayang',
-                        cancelButtonText: 'Gak',
-                        showCancelButton: true,
-                    });
-                    if(sayang){
-                        await swals.fire('Aku juga sayang banget sama kamu');
-                        var { value: persen } = await swals.fire({
-                            title: 'Seberapa sayang emangnya?',
-                            icon: 'question',
-                            input: 'range',
-                            inputLabel: 'Antara 1-100 ya',
-                            inputAttributes: {
-                                min: 1,
-                                max: 100,
-                            },
-                            inputValue: 50
-                        });
-                        if(persen){
-                            await swals.fire(`Makasih ya udah sayang sama ${author} ${persen}%`);
-                            var { isConfirmed: kangen } = await swals.fire({
-                                title: 'Sekarang kamu kangen ga sama aku?',
-                                confirmButtonText: 'Kangen',
-                                cancelButtonText: 'Gak!',
-                                showCancelButton: true,
-                            });
-                            if(kangen){
-                                await swals.fire('Huhu iya aku juga kangen kamu :((');
-                                await swals.fire('Terakhir deh sayang');
-                                await swals.fire('Coba klik ikon hati di paling bawah dong');
-                            } else {
-                                //gak kangen
-                            }
-                        }
-                    } else {
-                        //gak sayang
-                    }
-                } else {
-                    //gak isi nama
-                }
             }
         function hati(){
             document.getElementById('button').style = 'display: none';
