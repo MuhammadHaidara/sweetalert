@@ -71,6 +71,10 @@ section {
     [data-aos-delay] {
         transition-delay: 0 !important;
     }
+    .header .logo span {
+        font-size: 20px;
+        float:left;
+    }
 }
 /*--------------------------------------------------------------
 # Header
@@ -84,6 +88,7 @@ section {
 .header.header-scrolled {
     padding: 15px 0;
     box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+    background: #f5576c;
 }
 .header .logo {
     line-height: 0;
@@ -296,7 +301,7 @@ section {
         font-size: 24px;
     }
     .hero .hero-img img {
-        width: 100%;
+        width: 50%;
     }
 }
 
